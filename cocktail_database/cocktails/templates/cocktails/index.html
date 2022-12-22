@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista koktajlów :D</title>
+</head>
+<body>
+{% if cocktail_list %}
+    <ul>
+    {% for cocktail in cocktail_list %}
+        <li><a href="cocktails/{{ cocktail.id }}/">{{ cocktail.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cocktails are available.</p>
+{% endif %}
+</body>
+</html>
